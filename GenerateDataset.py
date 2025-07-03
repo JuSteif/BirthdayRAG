@@ -47,14 +47,47 @@ last_names = [
     "Yamada", "Sasaki", "Yamaguchi", "Matsumoto", "Inoue", "Kimura", "Hayashi", "Shimizu", "Nakajima", "Morita",
     "Park", "Choi", "Jeong", "Cho", "Kang", "Yoon", "Im", "Han", "Seo", "Jung",
     "Tran", "Nguyen", "Pham", "Le", "Hoang", "Vo", "Dang", "Bui", "Do", "Duong",
-    "Dao", "Dinh", "Ngo", "Hua", "Quach", "Chau", "Ngoc", "Quyen", "Phan", "Loc"
-]
+    "Dao", "Dinh", "Ngo", "Hua", "Quach", "Chau", "Ngoc", "Quyen", "Phan", "Loc",
 
-# Sicherstellen, dass genügend Nachnamen existieren
-if len(last_names) < 250:
-    # Auffüllen falls zu wenige vorhanden
-    extra_names = ["Surname" + str(i) for i in range(250 - len(last_names))]
-    last_names.extend(extra_names)
+    "Müller", "Schmidt", "Schneider", "Fischer", "Weber",
+    "Meyer", "Wagner", "Becker", "Schulz", "Hoffmann",
+
+    # Französisch (10)
+    "Bernard", "Dubois", "Robert", "Richard", "Petit",
+    "Durand", "Leroy", "Moreau", "Simon", "Laurent",
+
+    # Italienisch (10)
+    "Rossi", "Russo", "Ferrari", "Esposito", "Bianchi",
+    "Romano", "Ricci", "Marino", "Greco", "Gallo",
+
+    # Russisch (10)
+    "Ivanov", "Smirnov", "Kuznetsov", "Popov", "Petrov",
+    "Sokolov", "Lebedev", "Morozov", "Novikov", "Fedorov",
+
+    # Polnisch (10)
+    "Nowak", "Kowalski", "Wiśniewski", "Wójcik", "Kowalczyk",
+    "Kamiński", "Lewandowski", "Zieliński", "Szymański", "Dąbrowski",
+
+    # Nigerianisch (10)
+    "Okafor", "Adeyemi", "Chukwu", "Adebayo", "Eze",
+    "Ibrahim", "Mohammed", "Musa", "Obasanjo", "Nwosu",
+
+    # Arabisch (10)
+    "Hussein", "Abbas", "Khalil", "Nasser", "Hamdan",
+    "Khatib", "Haddad", "Saleh", "Faraj", "Tawfiq",
+
+    # Indisch (10)
+    "Kumar", "Singh", "Sharma", "Khan", "Gupta",
+    "Reddy", "Iyer", "Choudhary", "Pillai", "Nair",
+
+    # Türkisch (10)
+    "Yılmaz", "Kaya", "Demir", "Şahin", "Çelik",
+    "Yıldırım", "Aydin", "Arslan", "Öztürk", "Polat",
+
+    # Griechisch (10)
+    "Papadopoulos", "Papadakis", "Nikolaou", "Georgiou", "Vassiliou",
+    "Christodoulou", "Anastasiou", "Konstantinou", "Pappas", "Angelopoulos"
+]
 
 def generate_random_birthdate():
     start_date = datetime(1950, 1, 1)
@@ -72,7 +105,7 @@ for _ in range(2000):
     last_name = random.choice(last_names)
     day, month, year = generate_random_birthdate()
     person = {
-        "surname": first_name,
+        "firstname": first_name,
         "lastname": last_name,
         "day": day,
         "month": month,
